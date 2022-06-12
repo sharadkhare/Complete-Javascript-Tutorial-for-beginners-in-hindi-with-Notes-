@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript Arrays</h2>
+    <p>arrays is a special variable which can hold more than one value</p>
+    <p id="sharad"></p>
+    <script>
+        const car = ["saab", "volvo", "bmw"];
+        document.getElementById("sharad").innerHTML = car;
+    </script>
+
+    <h2>why we use arrays?</h2>
+    <p>an array can able to hold many value under single name and you can also access the values by referring to an index number also but in single variable you can't do even this and looping</p>
+    
+    <h2>Creating an array</h2>
+    <p id="sharad1"></p>
+    <script>
+        const cars = ["saab", "volvo", "bmw"];
+        document.getElementById("sharad1").innerHTML = cars;
+    </script>
+    <p>"another way to create an array."</p>
+    <p id="sharad2"></p>
+    <script>
+        const cars1 = [];
+        cars1[0]= "ford";
+        cars1[1]= "vovlo";
+        cars1[2]= "bmw";
+        document.getElementById("sharad2").innerHTML = cars1;
+    </script>
+
+    <p>"Another way of using the javascript Keyword "New"</p>
+    <p id="sharad3"></p>
+    <script>
+        const cars2 = new Array("saab", "volvo", "bmw");
+        document.getElementById("sharad3").innerHTML = cars2;
+    </script>
+
+    <h2>Accesing the Arrays Elements</h2>
+    <p>all the arrays elements accessed using the numeric values which start from o as a index</p>
+    <p id="sharad4"></p>
+    <script>
+        const cars3 = ["saab", "volvo", "bmw"];
+        document.getElementById("sharad4").innerHTML = cars3[0];
+    </script>
+
+    <h2>Changing an array Element</h2>
+    <p id="sharad5"></p>
+    <script>
+        const cars4 = ["saab", "volvo", "bmw"];
+        cars4[0] = "maruti";
+        document.getElementById("sharad5").innerHTML = cars4;
+        
+    </script>
+
+    <h2>Accessing the Full Arrays</h2>
+    <p id="sharad6"></p>
+    <script>
+        const cars5 = ["saab", "volvo", "bmw"];
+        document.getElementById("sharad6").innerHTML = cars5;
+    </script>
+
+    <h2>Arrays are also objects</h2>
+    <p id="sharad7" ></p>
+    <script>
+        const cars7 = ["saab", "volvo", 46];
+        document.getElementById("sharad7").innerHTML = cars7[2];
+    </script>
+
+    <p>javascript uses names to access objects properties</p>
+    <p id="sharad8"></p>
+    <script>
+        const person = {firstname:"sharad", lastname:"khare", age:35};
+        document.getElementById("sharad8").innerHTML = person.firstname;
+    </script>
+
+    <h2>the length property - it can define the length of any array</h2>
+    <p id="sharad9"></p>
+    <script>
+        const fruits = ["banana", "orange", "apple", "mango"];
+        document.getElementById("sharad9").innerHTML = fruits.length;
+    </script>
+
+    <h2>accessing the last array element</h2>
+    <p id="sharad10"></p>
+    <script>
+        var fruits1 = ["banana", "orange", "apple", "mango"];
+        document.getElementById("sharad10").innerHTML = fruits1[fruits1.length-1];
+    </script>
+
+    <h2>Looping arrays Elements</h2>
+    <p>now we are doing loop through For</p>
+    <p id="sharad11"></p>
+    <script>
+        fruits11 = ["banana", "orange", "apple", "mango"];
+        let flen = fruits11.length;
+        let text = "<ul>";
+        for (let i = 0; i < flen; i++) {
+            text += "<li>" + fruits11[i] + "</li>"; 
+        }
+        text += "</ul>";
+
+        document.getElementById("sharad11").innerHTML = text;
+    </script>
+    
+</body>
+</html>

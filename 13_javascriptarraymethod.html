@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript array method</h2>
+    <p>the Tostring() method returns an array as a comma seperated string</p>
+    <p id="sharad"></p>
+    <script>
+        const fruits = ["banana", "orange", "apple", "mango"];
+        document.getElementById("sharad").innerHTML = fruits.toString();
+    </script>
+
+    <p>the Join() method jins array elements into a string</p>
+    <p id="sharad1"></p>
+    <script>
+        const fruits1 = ["banana", "orange", "apple", "mango"];
+        document.getElementById("sharad1").innerHTML = fruits1.join("*");
+    </script>
+
+    <h2>popping and pushing</h2>
+    <p>popping(remove) items out of an array, pushing(adding) items into an array</p>
+    <p>javascript array pop()</p>
+    <p>the pop() method removes the last element from an array</p>
+    <p id="sharad2"></p>
+    <p id="sharad3"></p>
+    <script>
+        const fruits3 = ["banana", "orange", "apple", "mango"];
+        document.getElementById("sharad2").innerHTML = fruits3;
+        fruits3.pop();
+        document.getElementById("sharad3").innerHTML = fruits3;
+    </script>
+    <p>The push() method appends a new element to an array</p>
+    <p id="sharad4"></p>
+    <script>
+        const fruits4 = ["banana", "orange", "apple", "mango"];
+        fruits4.push("kiwi");
+        document.getElementById("sharad4").innerHTML = fruits4;
+    </script>
+
+    <h2>shifting elements</h2>
+    <p>the shift() method removes the first element of an array and shifts the other elements to the left</p>
+    <p id="sharad5"></p>
+    <p id="sharad6"></p>
+    <script>
+        const fruits5 = ["banana", "orange", "apple", "mango"];
+        document.getElementById("sharad5").innerHTML = fruits5.shift();
+        document.getElementById("sharad6").innerHTML = fruits5;
+    </script>
+    <p>the unshift() method adds new element to the beginning of an array.</p>
+    <p id="sharad7"></p>
+    <p id="sharad8"></p>
+    <script>
+        const fruits8 = ["banana", "orange", "apple", "mango"];
+        document.getElementById("sharad7").innerHTML = fruits8;
+        fruits8.unshift("lemon");
+        document.getElementById("sharad8").innerHTML = fruits8;
+    </script>
+
+    <h2>javascript array length</h2>
+    <p>the length porperty provides an easy way to append new element to an array without using the push method.</p>
+    <p id="sharad9"></p>
+    <p id="sharad10"></p>
+    <script>
+        const fruits10 = ["banana", "orange", "apple", "mango"];
+        document.getElementById("sharad9").innerHTML = fruits10;
+        fruits10[fruits10.length] = "kiwi";
+        document.getElementById("sharad10").innerHTML = fruits10;
+    </script>
+    <!-- javascript array delete()... dont use this method. instead use pop() or shift()-->
+
+    <h2>Merging or concatenation array </h2>
+    <p>the concat() method merge arrays</p>
+    <p id="sharad11"></p>
+    <script>
+        const mygirls = ["harsha", "alice"];
+        const myboys = ["sharad", "john", "sanjay"];
+        const myparent = ["mukesh", "shyam"];
+        const mychildren = mygirls.concat(myboys, myparent);
+        document.getElementById("sharad11").innerHTML = mychildren;
+    </script>
+
+    <p>the concat() method also merge string values to an array</p>
+    <p id="sharad12"></p>
+    <script>
+        const fruits12 = ["banana", "orange", "apple", "mango"];
+        const green = fruits12.concat("lemon");
+        document.getElementById("sharad12").innerHTML = green;  
+    </script>
+
+    <h2>splicing and slicing array</h2>
+    <p>the splice() method adds a new element to an array</p>
+    <p id="sharad13"></p>
+    <script>
+        const fruits13 = ["banana", "orange", "apple", "mango"];
+        fruits13.splice(2, 0, "lemon", "kiwi");
+        document.getElementById("sharad13").innerHTML = fruits13;
+    </script>
+    <p>the splice() method also returns an array with the deleted element</p>
+    <p id="sharad14"></p>
+    <script>
+        const fruits14 = ["banana", "orange", "apple", "mango"];
+        fruits14.splice(2, 2, "lemon", "kiwi");
+        document.getElementById("sharad14").innerHTML = fruits14;
+    </script>
+
+    <p>the slice() method slices out a part of an array starting from array element.</p>
+    <p id="sharad15"></p>
+    <script>
+        const fruits15 = ["banana", "orange", "apple", "mango"];
+        const newfruits = fruits15.slice(1);
+        document.getElementById("sharad15").innerHTML = newfruits;
+    </script>
+
+    
+</body>
+</html>

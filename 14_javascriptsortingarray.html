@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript array sorting</h2>
+    <p>the sort() method sorts an array alphabetically</p>
+    <p id="sharad"></p>
+    <p id="sharad1"></p>
+    <script>
+        const fruits = ["banana", "orange", "apple", "mango"];
+        document.getElementById("sharad").innerHTML = fruits;
+
+        fruits.sort();
+        document.getElementById("sharad1").innerHTML = fruits;
+    </script>
+
+    <p>the reverse() method reverses the elements in an array</p>
+    <p id="sharad2"></p>
+    <script>
+        const fruits2 = ["banana", "orange", "apple", "mango"];
+        fruits2.sort();
+        fruits2.reverse();
+        document.getElementById("sharad2").innerHTML = fruits2;
+    </script>
+
+    <p>numeric sort the array in ascending order</p>
+    <p id="sharad3"></p>
+    <p id="sharad4"></p>
+    <script>
+        const points = [40, 100, 1, 5, 25, 10];
+        document.getElementById("sharad3").innerHTML = points;
+        points.sort(function(a,b) {
+            return a - b})
+            document.getElementById("sharad4").innerHTML = points;
+    </script>
+
+    <h2>the compare function</h2>
+    <p>here we are doing a demo , click the button to sort te array.</p>
+    <button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+
+<p id="sharad5"></p>
+<script>
+const points5 = [40, 100, 1, 5, 25, 10];
+document.getElementById("sharad5").innerHTML = points;  
+function myFunction1() {
+  points.sort();
+  document.getElementById("sharad5").innerHTML = points;
+}
+function myFunction2() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("sharad5").innerHTML = points;
+}
+</script>
+
+<h2>sorting an array in random order</h2>
+<p>click the button again and again to change the array in random order</p>
+<button onclick="myFunction3()">Try it</button>
+<p id="sharad6"></p>
+
+<script>
+const points6 = [40, 100, 1, 5, 25, 10];
+document.getElementById("sharad6").innerHTML = points;  
+
+function myFunction3() {
+  points.sort(function(a, b){return 0.5 - Math.random()});
+  document.getElementById("sharad6").innerHTML = points;
+}
+</script>
+
+<h2>highest and lowest array value</h2>
+<p>the lowest number is <span id="sharad7"></span></p>
+<script>
+const points7 = [40, 100, 1, 5, 25, 10];
+points7.sort(function(a, b){
+    return a-b
+});
+document.getElementById("sharad7").innerHTML = points7[0];
+</script>
+
+</body>
+</html>

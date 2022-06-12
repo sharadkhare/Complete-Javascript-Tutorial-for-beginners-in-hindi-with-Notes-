@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript search methods</h2>
+    <ul>
+        <li>string indexof()</li>
+        <li>string lastindexof()</li>
+        <li>string startsWith()</li>
+        <li>string endswith()</li>
+    </ul>
+
+    <h2>javascript string indexof</h2>
+    <p id="sharad"></p>
+    <script>
+        let str = "please locate where 'locate' occurs";
+        document.getElementById("sharad").innerHTML = str.indexOf("locate");
+    </script>
+    <h2>javascript string lastindexof</h2>
+    <p id="sharad1"></p>
+    <script>
+        let str1 = "please locate where 'locate' occurs";
+        document.getElementById("sharad1").innerHTML = str1.lastIndexOf("locate");
+    </script>
+
+    <h2>javascript string search</h2>
+    <p>the search() methods returns the position of the 1st occurance of a specified text in a string</p>
+    <p id="sharad2"></p>
+    <script>
+        let str2 = "please locate where 'locate' occurs";
+        document.getElementById("sharad2").innerHTML = str2.search("locate");
+    </script>
+
+    <h2>javascript string match()</h2>
+    <p>the match() method searches a string for a match, as an array object</p>
+    <p id="sharad3"></p>
+    <script>
+        let text = "the rain in India stays mainly in july"
+        document.getElementById("sharad3").innerHTML = text.match(/in/gi);
+    </script>
+
+    <h2>javascript string includes()</h2>
+    <p>the includes() method return true if a string contains a specified value</p>
+    <p>this method is not supported in Internet explorer</p>
+    <p id="sharad4"></p>
+    <script>
+        let text1 = "hello sharad, welcome to this tutorial";
+        document.getElementById("sharad4").innerHTML = text1.includes("sharad");
+    </script>
+
+    <h2>check if a string includes some name after certain index</h2>
+    <p id="sharad5"></p>
+    <script>
+        let text2 = "hello sharad, welcome to this tutorial";
+        document.getElementById("sharad5").innerHTML = text2.includes("sharad", 12);
+    </script>
+
+    <h2>javascript string startsWith()</h2>
+    <p>check if the string startx with "hello"</p>
+    <p id="sharad6"></p>
+    <script>
+        let text3 = "hello sharad bhai, how are you";
+        document.getElementById("sharad6").innerHTML = text3.startsWith("hello");
+    </script>
+
+    <h2>javascript string endswith()</h2>
+    <p>the endswith() methods returns true of a string with aspecified value or text, otherwise it returns false</p>
+    <p id="sharad7"></p>
+    <script>
+        let text4 = "sharad khare"
+        document.getElementById("sharad7").innerHTML = text4.endsWith("khare");
+    </script>
+
+
+</body>
+</html>

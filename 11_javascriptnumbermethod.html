@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Number Method</h2>
+    <!-- the tostring() method-->
+    <p>The tostring() method converts a number to string</p>
+    <p id="sharad"></p>
+    <script>
+        let a = 123;
+        document.getElementById("sharad").innerHTML = a.toString() + "<br>" + (123).toString() + "<br>" + (100 + 23).toString();
+    </script>
+
+    <p>The toExponetial() method - returns a string with a number rounded and written using toExponetial notation.</p>
+    <p id="sharad1"></p>
+    <script>
+        let b = 9.656;
+        document.getElementById("sharad1").innerHTML = b.toExponential() + "<br>" + b.toExponential(2) + "<br>" + b.toExponential(4) + "<br>" + b.toExponential(6);
+    </script>
+
+    <p>The tofixed() method- rounds a number to a given number of digits. </p>
+    <!-- Tofixed(2) is perfect for working with money-->
+    <p id="sharad3"></p>
+    <script>
+        let c = 9.656;
+        document.getElementById("sharad3").innerHTML = c.toFixed() + "<br>" + c.toFixed(2) + "<br>" + c.toFixed(4) + "<br>" + c.toFixed(6); 
+    </script>
+
+    <p>The toprecision() method - returns a string with a number written with a specified length</p>
+    <p id="sharad4"></p>
+    <script>
+    let d = 9.656;
+    document.getElementById("sharad4").innerHTML = d.toPrecision() + "<br>" + d.toPrecision(2) + "<br>" + d.toPrecision(4) + "<br>" + d.toPrecision(6);
+    </script>
+
+    <p>The Valueof() method - returns a number as a number</p>
+    <p id="sharad5"></p>
+    <script>
+        let e = 123;
+        document.getElementById("sharad5").innerHTML = e.valueOf() + "<br>" + (123).valueOf() + "<br>" + (100 + 23).valueOf();
+        
+    </script>
+
+    <h2>COnverting the variables to numbers</h2>
+    <p>number() method, parseInt() method, parseFloat() method</p>
+    <p>javascript Global method can be used on all javascript data type.</p>
+
+    <p>The number() method - converts variables to numbers</p>
+    <p id ="sharad6" ></p>
+    <script>
+        document.getElementById("sharad6").innerHTML = Number(true) + "<br>" + Number(false) + "<br>" + Number("10") + "<br>" + Number(" 10") + "<br>" + Number("10 ") + "<br>" + Number(" 10  ") + "<br>" + Number("10.33") + "<br>" + Number("10,33") + "<br>" + Number("10 33") + "<br>" + Number("sharad");
+    </script>
+    <p>The number() method can convert a date to a number</p>
+    <p id="sharad7" ></p>
+    <script>
+        let f = new Date("2022-05-20");
+        document.getElementById("sharad7").innerHTML = Number(f);
+    </script>
+
+    <p>the parseint() method- converts strings to numbers. first number is returned</p>
+    <p id="sharad8"></p>
+    <script>
+        document.getElementById("sharad8").innerHTML = parseInt("-10") + "<br>" + parseInt("-10.33") + "<br>" + parseInt("10") + "<br>" + parseInt("10.33") + "<br>" + parseInt("10 6 ") + "<br>" + parseInt("10 years") + "<br>" + parseInt("years 10");
+    </script>
+
+
+    <p>The parseFloat() method - parses a string and returns a number. first number is returned</p>
+    <p id="sharad9"></p>
+    <script>
+        document.getElementById("sharad9").innerHTML = parseFloat("10") + "<br>" + parseFloat("10.33") + "<br>" + parseFloat("10 6") + "<br>" + parseFloat("10 years") + "<br>" + parseFloat("years 10");
+    </script>
+
+    <h2>javascript Max_value and min_Value</h2>
+    <p id="sharad10"></p>
+    <p id="sharad11"></p>
+    <script>
+        let g = Number.MAX_VALUE;
+        let h = Number.MIN_VALUE;
+        document.getElementById("sharad10").innerHTML = g + "<br>";
+        document.getElementById("sharad11").innerHTML = h;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript numbers</h2>
+    <script>
+        let x = 3.14;
+        let y = 3;
+        let a = 123e5; // 12300000
+        let b = 123e-5 // 0.00123
+        // javascript number are always 64 - bit floating point.
+        // IEEE 754 standard.
+
+    </script>
+    <h2>integer precision </h2>
+    <p>integer (numbers without a exponant notation) are accurate up to 15 digit. and maximum number in decimals is 17 digit</p>
+    <p id= sharad></p>
+    <script>
+        let c = 999999999999999;
+        let d = 9999999999999999;
+        document.getElementById("sharad").innerHTML = c + "<br>" + d;
+    </script>
+
+    <p>floating point arithmetic is also always not 100% accurate</p>
+    <p id="sharad1"></p>
+    <script>
+    let e = 0.2 + 0.1;
+    document.getElementById("sharad1").innerHTML = "0.2 + 0.1 = " + e;
+
+</script>
+
+<h2>solving problem above</h2>
+<p>but it helps to multiply and divide</p>
+<p id="sharad3"></p>
+<p id="sharad4"></p>
+<script>
+    let f = 0.2 + 0.1;
+    document.getElementById("sharad3").innerHTML = "0.2 + 0.1 = " + f;
+    let g = (0.2*10 + 0.1*10)/10;
+    document.getElementById("sharad4").innerHTML = "0.2 + 0.1 = " + g;
+</script>
+
+<h2>adding numbers and strings</h2>
+<p>if you add 2 numeric string than the result will be concatenated string</p>
+<p id="sharad5"></p>
+<script>
+    let h = "10";
+    let i = "20";
+    let j = h + i;
+    document.getElementById("sharad5").innerHTML= j;
+</script>
+<p>if you add a numeric and a string than the result will be concatenated string</p>
+<p id="sharad6"></p>
+<script>
+    let k = 10;
+    let l = "20";
+    let m = h + i;
+    document.getElementById("sharad6").innerHTML= m;
+</script>
+
+<h2>NaN - Not a Number</h2>
+<p>if a number is divided by a non numeric string than it becomes NaN(Not a Number)</p>
+<p id="sharad7"></p>
+<script>
+    document.getElementById("sharad7").innerHTML = 100/"apple";
+</script>
+
+<p>if a number is divided by a numeric string than it becomes a Number</p>
+<p id="sharad8"></p>
+<script>
+    document.getElementById("sharad8").innerHTML = 100/"10";
+</script>
+
+<p>you can use the global javascript function isNaN() to find out if a value is not a number</p>
+<p id="sharad9"></p>
+<script>
+    let n = 100/"apple";
+    document.getElementById("sharad9").innerHTML = isNaN(n);
+</script>
+
+<p>the typeof NaN is number:</p>
+<p id="sharad10"></p>
+<script>
+    let o = NaN;
+    document.getElementById("sharad10").innerHTML = typeof o;
+</script>
+
+<p>infinity is returned if you calculate a number outside the largest possible number:</p>
+<p id="sharad11"></p>
+<script>
+    let mynumber = 2;
+    let txt = "";
+    while (mynumber != Infinity) {
+        mynumber = mynumber * mynumber;
+        txt = txt + mynumber + "<br>";
+    }
+    document.getElementById("sharad11").innerHTML = txt;
+</script>
+
+
+</body>
+</html>

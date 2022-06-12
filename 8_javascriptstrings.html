@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript strings</h2>
+    <p id="sharad"></p>
+    <script>
+        let text = "Sharad Khare" // string is written inside the quotes
+        document.getElementById("sharad").innerHTML = text;
+    </script>
+    <p id="sharad1"></p>
+    <script>
+        let text1 = "Sharad Khare's 1" // string is written inside the quotes
+        document.getElementById('sharad1').innerHTML = text1;
+</script>
+
+
+<h2>String length</h2>
+<p id="length"></p>
+<script>
+    let text2 = "abcdefghijklmnopqrstuvwxyz";
+    document.getElementById("length").innerHTML = text2.length;
+
+</script>
+
+<h2>Escape characters</h2>
+<p id="text3"></p>
+    <script>
+        let text3 = ' \"sharad khare\" '// string is written inside the quotes
+        document.getElementById('text3').innerHTML = text3;
+        </script>
+
+<h2>javascript strings as object</h2>
+<p id="sharad2"></p>
+<script>
+// x is a string
+let x = "Sharad";
+
+// y is an object
+let y = new String("Sharad") 
+document.getElementById("sharad2").innerHTML = typeof x + "<br>" + typeof y;
+
+</script>
+<!-- 1. never ever create a string as object-->
+
+<h2>never ever create a string as object</h2>
+<p id="sharad3" ></p>
+<script>
+    let a = "sharad"
+    let b = new String("sharad")
+    document.getElementById("sharad3").innerHTML = (a==b);
+</script>
+
+<h2>Extracting string parts</h2>
+<p>1.slice(start, end) <br>
+2. substring (start, end)<br>
+3. substr(start, end)
+</p>
+
+<h2>javascript string methods</h2>
+<p>the slice() method extract the part of a string</p>
+<p id="sharad4"></p>
+<script>
+    let str = "apple, banana, kiwi";
+    document.getElementById("sharad4").innerHTML = str.slice(7, 13)
+</script>
+<p>the slice() method extract the part of a string with negative parameter</p>
+<p id="sharad5"></p>
+<script>
+    let str1 = "apple, banana, kiwi";
+    document.getElementById("sharad5").innerHTML = str1.slice(-12,-6)
+</script>
+
+<p>the substring() method extract a part of a string and return the extracted string into new one</p>
+<p id="sharad6"></p>
+<script>
+    let str3 = "apple, banana, kiwi";
+    document.getElementById("sharad6").innerHTML = str3.substring(7, 13);
+</script>
+
+<p> the substr() method extract a part of a string and return the extracted string into new one</p>
+
+<p id="sharad7"></p>
+<script>
+    let str4 = "apple, banana, kiwi";
+    document.getElementById("sharad7").innerHTML = str4.substr(15,4)
+</script>
+
+<h2>Replacing the String Content</h2>
+<p>Repalce function works by replace()</p>
+
+<button onclick="myfunction()">Replace it by clicking</button>
+<p id="sharad8">Please visit sharad youtube channel</p>
+<script>
+    function myfunction() {
+        let text = document.getElementById("sharad8").innerHTML;
+        document.getElementById("sharad8").innerHTML = text.replace("channel", "course"); 
+    }
+</script>
+
+<h2>Converting Uppercase letter to lowercase letter</h2>
+<p>convert string to uppercase</p>
+<button onclick="uppcasefunc()">Try for uppercase</button>
+<p id="sharad9">hello sharad bhai</p>
+<script>
+    function uppcasefunc() {
+        let text4 = document.getElementById("sharad9").innerHTML;
+        document.getElementById("sharad9").innerHTML = text4.toUpperCase();
+    }
+</script>
+<p>convert string to lowercase</p>
+<button onclick="lowercasefunc()">Try for lowercase</button>
+<p id="sharad10">HELLO SHARAD KHARE</p>
+<script>
+    function lowercasefunc() {
+        let text5 = document.getElementById("sharad10").innerHTML;
+        document.getElementById("sharad10").innerHTML = text5.toLowerCase();
+    }
+</script>
+
+<h2>javascript string concatination concat()</h2>
+<p>the concat() method join 2 or more strings</p>
+<p id="sharad11"></p>
+<script>
+    let text5 = "Sharad";
+    let text6 = "Khare";
+    let text7 = text5.concat(" ", text6);
+    document.getElementById("sharad11").innerHTML = text7;
+
+</script>
+
+<h2>javascript string trim()</h2>
+
+<p id="sharad12"></p>
+<script>
+    let text8 = "    hello sharad     ";
+    let text9 = text8.trim();
+    document.getElementById("sharad12").innerHTML = "length text8 =" + text8.length + "<br>length text9=" + text9.length;
+</script>
+
+</body>
+</html>
